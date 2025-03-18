@@ -1,0 +1,416 @@
+.admin-page {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.admin-header {
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.admin-header p {
+  color: #666;
+}
+
+.admin-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.admin-sidebar {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 25px;
+  height: fit-content;
+}
+
+.admin-sidebar h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-nav li {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-nav li:hover {
+  background-color: #f0f0f0;
+}
+
+.admin-nav li.active {
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: 500;
+}
+
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.admin-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff6b6b;
+  outline: none;
+}
+
+.image-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.upload-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+  background-color: #e5e5e5;
+}
+
+.upload-filename {
+  font-size: 14px;
+  color: #666;
+}
+
+.submit-button,
+.cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.submit-button {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #ff5252;
+}
+
+.cancel-button {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background-color: #e5e5e5;
+}
+
+.banner-list {
+  margin-top: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.content-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-thumbnail {
+  width: 80px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-button {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.edit-button:hover {
+  background-color: #e0e0e0;
+}
+
+.delete-button {
+  background-color: #ffeeee;
+  color: #ff5252;
+}
+
+.delete-button:hover {
+  background-color: #ffdddd;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #ff6b6b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.error-message {
+  padding: 15px;
+  background-color: #ffeeee;
+  color: #ff5252;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.no-banners {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+
+.admin-auth-message {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+.admin-auth-message h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff6b6b;
+}
+
+/* Dark mode styles */
+:root .admin-sidebar {
+  background-color: #2a2a2a;
+}
+
+:root .admin-sidebar h2 {
+  border-bottom-color: #444;
+}
+
+:root .admin-nav li:hover {
+  background-color: #333;
+}
+
+:root .admin-section {
+  background-color: #2a2a2a;
+}
+
+:root .admin-table th {
+  background-color: #333;
+  color: #ddd;
+}
+
+:root .admin-table td {
+  border-bottom-color: #444;
+}
+
+:root .admin-header p,
+:root .upload-filename {
+  color: #bbb;
+}
+
+:root .form-group input,
+:root .form-group textarea {
+  background-color: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+:root .upload-button,
+:root .edit-button {
+  background-color: #333;
+  color: #ddd;
+  border-color: #444;
+}
+
+:root .upload-button:hover,
+:root .edit-button:hover {
+  background-color: #444;
+}
+
+:root .cancel-button {
+  background-color: #333;
+  color: #ddd;
+}
+
+:root .cancel-button:hover {
+  background-color: #444;
+}
+
+:root .delete-button {
+  background-color: #3a2a2a;
+  color: #ff6b6b;
+}
+
+:root .delete-button:hover {
+  background-color: #4a2a2a;
+}
+
+:root .admin-auth-message {
+  background-color: #2a2a2a;
+}
+
+/* Light mode styles */
+.lightcolors .admin-sidebar {
+  background-color: #f8f8f8;
+}
+
+.lightcolors .admin-section {
+  background-color: white;
+}
+
+@media (max-width: 900px) {
+  .admin-container {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    margin-bottom: 20px;
+  }
+
+  .admin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .admin-nav li {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-section {
+    padding: 15px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 10px;
+  }
+
+  .content-cell {
+    max-width: 150px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

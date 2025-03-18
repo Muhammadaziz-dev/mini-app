@@ -1,106 +1,341 @@
-.place-order{
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 50px;
-    margin-top: 100px;
-}
-.place-order-left{
-    width: 100%;
-    max-width: max(30%, 500px);
-}
-.place-order-left .title{
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 50px;
-}
-.place-order-left input{
-    margin-bottom: 15px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #c5c5c5;
-    border-radius: 4px;
-    outline-color: tomato;
-}
-.place-order-left .multi-fields{
-    display: flex;
-    gap: 10px;
-}
-.place-order-right{
-    width: 100%;
-    max-width: max(40%, 500px);
-}
-.place-order .cart-total button{
-    margin-top: 30px;
+.place-order {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 100px;
 }
 
-:root .emaill {
-    background-color: black;
-}
-:root .emaill{
-    color: white;
+.place-order-left {
+  width: 100%;
+  max-width: max(30%, 500px);
 }
 
-:root .streett {
-    background-color: black;
-}
-:root .streett{
-    color: white;
-}
-
-:root .phonee {
-    background-color: black;
-}
-:root .phonee{
-    color: white;
+.place-order-left .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
 
-
-.lightcolors .emaill {
-    background-color: white;
-}
-.lightcolors .emaill{
-    color: black;
-}
-
-.lightcolors .streett {
-    background-color: white;
-}
-.lightcolors .streett{
-    color: black;
+.place-order-left input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  outline-color: tomato;
 }
 
-.lightcolors .phonee {
-    background-color: white;
-}
-.lightcolors .phonee{
-    color: black;
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 10px;
 }
 
+.place-order-right {
+  width: 100%;
+  max-width: max(40%, 500px);
+}
 
+.place-order .cart-total button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.place-order .cart-total button:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+}
+
+.payment-methods {
+  margin-top: 25px;
+}
+
+.payment-methods h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.payment-option.active {
+  border-color: tomato;
+  background-color: rgba(255, 99, 71, 0.05);
+}
+
+.payment-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.payment-checkmark {
+  position: relative;
+  top: 2px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-option.active .payment-checkmark {
+  border-color: tomato;
+}
+
+.payment-option.active .payment-checkmark:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: tomato;
+}
+
+.payment-label {
+  flex: 1;
+}
+
+.payment-label span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.payment-label p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.order-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 30px;
+}
+
+.order-confirmation-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.order-confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 20px;
+}
+
+.order-confirmation h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.order-confirmation p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.order-status {
+  margin: 25px 0;
+  font-weight: 500;
+}
+
+.order-status span {
+  background-color: #fff3e0;
+  color: #ff9800;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.order-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.order-buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.order-buttons button:first-child {
+  background-color: tomato;
+  color: white;
+}
+
+.order-buttons button:last-child {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.order-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+/* Dark mode styles */
+:root .emaill,
+:root .streett,
+:root .phonee,
 :root .multi-fields input {
-    background-color: black;
-    color: white; 
+  background-color: #333;
+  color: white;
+  border-color: #444;
 }
 
-:root .multi-fields input::placeholder {
-    color: white;
+:root .multi-fields input::placeholder,
+:root .emaill::placeholder,
+:root .streett::placeholder,
+:root .phonee::placeholder {
+  color: #aaa;
 }
 
+:root .title,
+:root .payment-methods h3 {
+  color: white;
+}
 
+:root .payment-option {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+:root .payment-option.active {
+  background-color: rgba(255, 99, 71, 0.1);
+  border-color: tomato;
+}
+
+:root .payment-checkmark {
+  background-color: #333;
+  border-color: #555;
+}
+
+:root .payment-label p {
+  color: #bbb;
+}
+
+:root .order-confirmation-content {
+  background-color: #2a2a2a;
+}
+
+:root .order-confirmation h2 {
+  color: #eee;
+}
+
+:root .order-confirmation p {
+  color: #bbb;
+}
+
+:root .order-buttons button:last-child {
+  background-color: #333;
+  color: #eee;
+}
+
+/* Light mode styles */
+.lightcolors .emaill,
+.lightcolors .streett,
+.lightcolors .phonee,
 .lightcolors .multi-fields input {
-    background-color: white;
-    color: black;
-}
-.lightcolors .multi-fields input::placeholder {
-    color: black;
+  background-color: white;
+  color: black;
+  border-color: #c5c5c5;
 }
 
-
-:root .title {
-    color: white;
+.lightcolors .title,
+.lightcolors .payment-methods h3 {
+  color: black;
 }
 
-.lightcolors .title {
-    color: black;
+.lightcolors .payment-option {
+  background-color: white;
+  border-color: #ddd;
 }
+
+.lightcolors .payment-label p {
+  color: #666;
+}
+
+.lightcolors .order-confirmation-content {
+  background-color: white;
+}
+
+.lightcolors .order-confirmation h2 {
+  color: #333;
+}
+
+.lightcolors .order-confirmation p {
+  color: #666;
+}
+
+.lightcolors .order-buttons button:last-child {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+@media (max-width: 750px) {
+  .place-order {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+  }
+
+  .place-order-left .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .order-buttons {
+    flex-direction: column;
+  }
+}
+
