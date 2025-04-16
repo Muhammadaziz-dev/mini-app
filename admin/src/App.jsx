@@ -14,7 +14,7 @@ import { useMediaQuery } from "./hooks/use-media-query"
 import { useState } from "react"
 
 const App = () => {
-  const url = "http://167.99.71.237:4000/"
+  const url = "https://capitalianceclub.com/"
   const isMobile = useMediaQuery("(max-width: 768px)")
   const [sidebarOpen, setSidebarOpen] = useState(!isMobile)
 
